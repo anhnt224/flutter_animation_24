@@ -25,6 +25,12 @@ class ImplicitScreen extends StatelessWidget {
                   context.router.push(const AnimatedOpacityRoute());
                 },
                 child: const Text('Animate Opacity')),
+            const Gap(16),
+            ElevatedButton(
+                onPressed: () {
+                  context.router.push(const AnimatedTextStyleRoute());
+                },
+                child: const Text('Animate Text Style')),
           ],
         ),
       ),
