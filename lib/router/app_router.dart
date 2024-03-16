@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_animation_24/screen/explicit_animations/complex_animation_screen.dart';
 import 'package:flutter_animation_24/screen/explicit_animations/heart_animation_screen.dart';
 import 'package:flutter_animation_24/screen/explicit_screen.dart';
+import 'package:flutter_animation_24/screen/hero_animations/hero_info_screen.dart';
+import 'package:flutter_animation_24/screen/hero_animations/hero_list_screen.dart';
 import 'package:flutter_animation_24/screen/home_screen.dart';
 import 'package:flutter_animation_24/screen/implicit_animations/animated_container_screen.dart';
 import 'package:flutter_animation_24/screen/implicit_animations/animated_opacity_screen.dart';
@@ -20,7 +23,11 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: AnimatedContainerRoute.page),
         AutoRoute(page: AnimatedOpacityRoute.page),
         AutoRoute(page: AnimatedTextStyleRoute.page),
+        // Explicit Animations
         AutoRoute(page: HeartAnimationRoute.page),
         AutoRoute(page: ComplexAnimationRoute.page),
+        // Hero Animations
+        AutoRoute(page: HeroListRoute.page),
+        AutoRoute(page: HeroInfoRoute.page),
       ];
 }

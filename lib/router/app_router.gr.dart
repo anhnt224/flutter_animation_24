@@ -51,6 +51,24 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HeartAnimationScreen(),
       );
     },
+    HeroInfoRoute.name: (routeData) {
+      final args = routeData.argsAs<HeroInfoRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: HeroInfoScreen(
+          key: args.key,
+          image: args.image,
+        ),
+      );
+    },
+    HeroListRoute.name: (routeData) {
+      final args = routeData.argsAs<HeroListRouteArgs>(
+          orElse: () => const HeroListRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: HeroListScreen(key: args.key),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -148,6 +166,73 @@ class HeartAnimationRoute extends PageRouteInfo<void> {
   static const String name = 'HeartAnimationRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HeroInfoScreen]
+class HeroInfoRoute extends PageRouteInfo<HeroInfoRouteArgs> {
+  HeroInfoRoute({
+    Key? key,
+    required MImage image,
+    List<PageRouteInfo>? children,
+  }) : super(
+          HeroInfoRoute.name,
+          args: HeroInfoRouteArgs(
+            key: key,
+            image: image,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'HeroInfoRoute';
+
+  static const PageInfo<HeroInfoRouteArgs> page =
+      PageInfo<HeroInfoRouteArgs>(name);
+}
+
+class HeroInfoRouteArgs {
+  const HeroInfoRouteArgs({
+    this.key,
+    required this.image,
+  });
+
+  final Key? key;
+
+  final MImage image;
+
+  @override
+  String toString() {
+    return 'HeroInfoRouteArgs{key: $key, image: $image}';
+  }
+}
+
+/// generated route for
+/// [HeroListScreen]
+class HeroListRoute extends PageRouteInfo<HeroListRouteArgs> {
+  HeroListRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          HeroListRoute.name,
+          args: HeroListRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'HeroListRoute';
+
+  static const PageInfo<HeroListRouteArgs> page =
+      PageInfo<HeroListRouteArgs>(name);
+}
+
+class HeroListRouteArgs {
+  const HeroListRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'HeroListRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
