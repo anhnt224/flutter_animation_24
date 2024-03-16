@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AnimatedContainerScreen(),
       );
     },
+    AnimatedOpacityRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AnimatedOpacityScreen(),
+      );
+    },
     ExplicitRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -52,6 +58,20 @@ class AnimatedContainerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AnimatedContainerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [AnimatedOpacityScreen]
+class AnimatedOpacityRoute extends PageRouteInfo<void> {
+  const AnimatedOpacityRoute({List<PageRouteInfo>? children})
+      : super(
+          AnimatedOpacityRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AnimatedOpacityRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
