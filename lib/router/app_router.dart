@@ -1,4 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_animation_24/screen/explicit_animations/complex_animation_screen.dart';
+import 'package:flutter_animation_24/screen/explicit_animations/heart_animation_screen.dart';
 import 'package:flutter_animation_24/screen/explicit_screen.dart';
 import 'package:flutter_animation_24/screen/home_screen.dart';
 import 'package:flutter_animation_24/screen/implicit_animations/animated_container_screen.dart';
@@ -18,5 +20,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: AnimatedContainerRoute.page),
         AutoRoute(page: AnimatedOpacityRoute.page),
         AutoRoute(page: AnimatedTextStyleRoute.page),
+        AutoRoute(page: HeartAnimationRoute.page),
+        AutoRoute(page: ComplexAnimationRoute.page),
       ];
 }

@@ -33,10 +33,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AnimatedTextStyleScreen(),
       );
     },
+    ComplexAnimationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ComplexAnimationScreen(),
+      );
+    },
     ExplicitRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const ExplicitScreen(),
+      );
+    },
+    HeartAnimationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HeartAnimationScreen(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -97,6 +109,20 @@ class AnimatedTextStyleRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [ComplexAnimationScreen]
+class ComplexAnimationRoute extends PageRouteInfo<void> {
+  const ComplexAnimationRoute({List<PageRouteInfo>? children})
+      : super(
+          ComplexAnimationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ComplexAnimationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [ExplicitScreen]
 class ExplicitRoute extends PageRouteInfo<void> {
   const ExplicitRoute({List<PageRouteInfo>? children})
@@ -106,6 +132,20 @@ class ExplicitRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ExplicitRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HeartAnimationScreen]
+class HeartAnimationRoute extends PageRouteInfo<void> {
+  const HeartAnimationRoute({List<PageRouteInfo>? children})
+      : super(
+          HeartAnimationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HeartAnimationRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
