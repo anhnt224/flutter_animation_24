@@ -81,6 +81,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ImplicitScreen(),
       );
     },
+    LottieAnimationsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LottieAnimationsScreen(),
+      );
+    },
   };
 }
 
@@ -259,6 +265,20 @@ class ImplicitRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ImplicitRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [LottieAnimationsScreen]
+class LottieAnimationsRoute extends PageRouteInfo<void> {
+  const LottieAnimationsRoute({List<PageRouteInfo>? children})
+      : super(
+          LottieAnimationsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LottieAnimationsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

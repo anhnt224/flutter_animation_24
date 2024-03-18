@@ -10,8 +10,12 @@ import 'package:flutter_animation_24/screen/implicit_animations/animated_contain
 import 'package:flutter_animation_24/screen/implicit_animations/animated_opacity_screen.dart';
 import 'package:flutter_animation_24/screen/implicit_animations/animated_text_style_screen.dart';
 import 'package:flutter_animation_24/screen/implicit_screen.dart';
+import 'package:flutter_animation_24/screen/lottie_animations/lottie_animations_screen.dart';
 
 part 'app_router.gr.dart';
+
+// To generate the router, run the following command:
+// -- flutter pub run build_runner watch --delete-conflicting-outputs
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
 class AppRouter extends _$AppRouter {
@@ -29,5 +33,7 @@ class AppRouter extends _$AppRouter {
         // Hero Animations
         AutoRoute(page: HeroListRoute.page),
         AutoRoute(page: HeroInfoRoute.page),
+        // Lottie Animations
+        AutoRoute(page: LottieAnimationsRoute.page),
       ];
 }

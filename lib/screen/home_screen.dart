@@ -37,6 +37,13 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text('Hero Animations'),
             ),
+            const Gap(16),
+            ElevatedButton(
+              onPressed: () {
+                context.router.push(const LottieAnimationsRoute());
+              },
+              child: const Text('Lottie Animations'),
+            ),
           ],
         ),
       ),
